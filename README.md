@@ -25,3 +25,7 @@ check in inspect->components section.recoil creates the provider,but you wnt see
 7.)comment the usestate hook and import useRecoilState hook from recoil and also import counterState.js file init and use the useRecoilState hook to change the state of count.
 
 8.)create countDislay.js file under src,create the countDisplay component init.THis component should display count value using the useRecoilState Hook and then import it in app.js as a component.
+
+9.)create the counterdoubleselector that multiplies the counterState value by 2 by importing selector form recoil in counterState.js file.
+
+10.)create countDoubleDisplay.js file under src and create the countDoubleDiplay component that returns the countValue as doubled by importing counterDoubleSelector from counterState.js and useRecoilState hook and import this as component in app.js
