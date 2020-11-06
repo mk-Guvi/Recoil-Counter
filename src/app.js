@@ -1,4 +1,5 @@
 import React from "react"
+import CounterDisplay from "./countDisplay"
 import Counter from "./counter"
 
 const App=()=>{
@@ -6,6 +7,7 @@ const App=()=>{
         <div>
             <h1>Hello Recoil</h1>
             <Counter/>
+            <CounterDisplay/>
         </div>
     )
 }

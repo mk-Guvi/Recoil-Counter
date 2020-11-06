@@ -23,3 +23,5 @@ check in inspect->components section.recoil creates the provider,but you wnt see
 6.)in counter.js,create buttons that increases/decreases the counter value using useState() hook.
 
 7.)comment the usestate hook and import useRecoilState hook from recoil and also import counterState.js file init and use the useRecoilState hook to change the state of count.
+
+8.)create countDislay.js file under src,create the countDisplay component init.THis component should display count value using the useRecoilState Hook and then import it in app.js as a component.
