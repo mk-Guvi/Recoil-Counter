@@ -49,5 +49,11 @@ reason Why hooks are available is that we can reduce logic into reusable pieces 
 
 13.)In ReusableHook.js,create a fetch request in useEffecthook and return it in as array of p-tag.
 
+14)create UseFetch.js in recoil folder and create a custom hook named useFetch that feteches array of data from an url using useEffect and import the useFetch hook in ReusableHook.js
 
-14)
+15.)In useFetch.js,add the Loading and error indiactors make sure that you json.
+
+
+16.)Import the loading and error indicators in ReuableHook.js.Make sure you stringify the error as it will be in json format when u fetch the data from an server.
+
+16.)
