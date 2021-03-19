@@ -8,9 +8,13 @@ shared state is also created by providers and context ,but the drawback with the
 
 To overcome this issue,we use recoil that create the shared state which can be accesed by all components and can render only the required compnent instead of rendering the all components.
 
-Recoil doesnt use providers instead it uses subscribers and publisher model to make states much more perfomant
+Recoil doesnt use providers instead it uses subscribers and publisher model to make states much more perfomance
 
 Recoil has two concepts that is Atom and selectors
+
+How Recoil works:
+
+Instead of using existing normal state you create a shared state which can be used in multiple components.If state changes in one component all the components that depond on the state rerenders whereas the context and providers rerender react app itself when the state changes.
 
 1.)yarn add recoil
 
