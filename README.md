@@ -2,9 +2,15 @@ Note:
 
 visit recoiljs.org to know more about recoil
 
-the main idea of recoil is instead of normal state you create a shared state.that is we create a state that can be ued by multiple components rather than using in its own component only like usestate.
+the main idea of recoil is instead of normal state you create a shared state.that is we create a state that can be used by multiple components rather than using in its own component only like usestate.
 
-shared state is also created by providers and context ,but the drawback with them is that they render all the components.To overcome this issue,we use recoil that create the shared state which can be accesed by all components and can render only the requiired compnent instead of rendering the all components.
+shared state is also created by providers and context ,but the drawback with them is that they render all the components whenever any data changes init.
+
+To overcome this issue,we use recoil that create the shared state which can be accesed by all components and can render only the required compnent instead of rendering the all components.
+
+Recoil doesnt use providers instead it uses subscribers and publisher model to make states much more perfomant
+
+Recoil has two concepts that is Atom and selectors
 
 1.)yarn add recoil
 
