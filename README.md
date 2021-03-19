@@ -41,4 +41,13 @@ usesetRecoilState is used When we want to edit a state.
 
 useResetRecoilState() is used When we want to reset a state value.
 
-11.)change useRecoilState to useRecoilValue in all components. 
+11.)change useRecoilState to useRecoilValue in all components.
+
+reason Why hooks are available is that we can reduce logic into reusable pieces which can be used anywhere.
+
+12.)create Re component in ReusableHook.js and import it as component in app.js
+
+13.)In ReusableHook.js,create a fetch request in useEffecthook and return it in as array of p-tag.
+
+
+14)

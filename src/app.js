@@ -2,7 +2,7 @@ import React from "react"
 import CounterDisplay from "./countDisplay"
 import Counter from "./counter"
 import CounterDoubleDisplay from "./countDoubleDisplay"
-
+import Re from "./ReusableHooks"
 const App=()=>{
     return(
         <div>
@@ -10,6 +10,8 @@ const App=()=>{
             <Counter/>
             <CounterDisplay/>
             <CounterDoubleDisplay/>
+            <br/>
+            <Re/>
         </div>
     )
 }
