@@ -56,3 +56,19 @@ reason Why hooks are available is that we can reduce logic into reusable pieces 
 16.)Import the loading and error indicators in ReuableHook.js.Make sure you stringify the error as it will be in json format when u fetch the data from an server.
 
 17.)In useFetch.js,add url,config={} as props so that we can use it in any other components too with different URLS .
+
+NOTES:
+
+https://usehooks.com/ to know more about creating custom hooks
+
+Commonly Used TOOLS:
+
+For data fetching -> https://react-query.tanstack.com/docs/overview
+
+For tables -> https://react-table-omega.vercel.app/
+
+For forms -> https://react-hook-form.com/api
+
+Animation library -> https://www.framer.com/motion/
+
+Anime in framer
