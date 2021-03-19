@@ -2,19 +2,9 @@ Note:
 
 visit recoiljs.org to know more about recoil
 
-the main idea of recoil is instead of normal state you create a shared state.that is we create a state that can be used by multiple components rather than using in its own component only like usestate.
+the main idea of recoil is instead of normal state you create a shared state.that is we create a state that can be ued by multiple components rather than using in its own component only like usestate.
 
-shared state is also created by providers and context ,but the drawback with them is that they render all the components whenever any data changes init.
-
-To overcome this issue,we use recoil that create the shared state which can be accesed by all components and can render only the required compnent instead of rendering the all components.
-
-Recoil doesnt use providers instead it uses subscribers and publisher model to make states much more perfomance
-
-Recoil has two concepts that is Atom and selectors
-
-How Recoil works:
-
-Instead of using existing normal state you create a shared state which can be used in multiple components.If state changes in one component all the components that depond on the state rerenders whereas the context and providers rerender react app itself when the state changes.
+shared state is also created by providers and context ,but the drawback with them is that they render all the components.To overcome this issue,we use recoil that create the shared state which can be accesed by all components and can render only the requiired compnent instead of rendering the all components.
 
 1.)yarn add recoil
 
@@ -30,7 +20,7 @@ check in inspect->components section.recoil creates the provider,but you wnt see
 
 5.)create counter.js file in src and create counter component init and import it in app.js as component.
 
-6.)in counter.js,create buttons that increases/decreases the counter value using useState() hook.
+6.)in counter.js,create buttons that increases/decreases the counter value using useState() hook which decribe the regular implementation ofthe state instead of shared state.
 
 7.)comment the usestate hook and import useRecoilState hook from recoil and also import counterState.js file init and use the useRecoilState hook to change the state of count.
 
@@ -39,3 +29,16 @@ check in inspect->components section.recoil creates the provider,but you wnt see
 9.)create the counterdoubleselector that multiplies the counterState value by 2 by importing selector form recoil in counterState.js file.
 
 10.)create countDoubleDisplay.js file under src and create the countDoubleDiplay component that returns the countValue as doubled by importing counterDoubleSelector from counterState.js and useRecoilState hook and import this as component in app.js
+
+NOTE:
+
+useRecoilState is used When we want to both read & edit a state
+
+useRecoilValue is used When we want to read a state.
+which may increase the performance
+
+usesetRecoilState is used When we want to edit a state.
+
+useResetRecoilState() is used When we want to reset a state value.
+
+11.)change useRecoilState to useRecoilValue in all components. 
