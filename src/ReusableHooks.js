@@ -11,14 +11,18 @@ const Re = () => {
   // }, []);
 
   // const tasks=useFetch()
-  const { tasks, isLoading, error } = useFetch();
+  const { tasks, isLoading, error } = useFetch(
+    "https://jsonplaceholder.typicode.com/todos"
+    // {method:"POST"}
+  );
   return (
     <div>
       {isLoading ? <p>{isLoading}</p> : null}
       {tasks.map((task, taskIndex) => {
         return <p key={taskIndex}>{task.title}</p>;
       })}
-      {error?<pre>{JSON.stringify(error)}</pre>:null}
+      {/* this will be executed only if there is any error in fetch the data */}
+      {error ? <pre>{JSON.stringify(error)}</pre> : null}
     </div>
   );
 };

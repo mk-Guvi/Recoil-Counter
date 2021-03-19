@@ -53,7 +53,6 @@ reason Why hooks are available is that we can reduce logic into reusable pieces 
 
 15.)In useFetch.js,add the Loading and error indiactors make sure that you json.
 
-
 16.)Import the loading and error indicators in ReuableHook.js.Make sure you stringify the error as it will be in json format when u fetch the data from an server.
 
-16.)
+17.)In useFetch.js,add url,config={} as props so that we can use it in any other components too with different URLS .
