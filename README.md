@@ -72,3 +72,60 @@ For forms -> https://react-hook-form.com/api
 Animation library -> https://www.framer.com/motion/
 
 Anime in framer
+
+NOTE:
+
+ "test": "react-scripts test",-It runs all Unit/Integration Tests in cli
+
+ TOOl:
+ Jest developed FB
+ Jest you need to add additional code to check  ether our code works or not
+
+JS TESTING:    https://jestjs.io/en/
+React testing:	https://testing-library.com/docs/react-testing-library/intro
+
+ "eject": "react-scripts eject"-In react-create-app,all the node files comes with by default to add some additional functionality to the files eject will give the files from the node_modules so that we can make a change init.
+
+ Note:
+ Before ejecting make sure you do a commit to avoid havng multiple files.
+git reset --hard for reverting to previous commit
+
+
+  "build": "react-scripts build":
+
+        1.)git init->git add .->git commit->npm run built or yarn build this will create chunk of files under build directory
+
+        Note:the npm run build will always the files of build so we need to add it in gitignore.
+
+        2.)git status
+
+        Reason for chunk files:
+                        React is Single Page Application(SPA) means all the assets are downloaded initially.
+                        Since it is SPA it doesnt mean you have to dowload aal the files initally.Example you have home page and about page.When user visits home page its not necessary to load about page along with it.About page should be loaded only after the user vists about page.To achieve this build command intelligently creates chunks of JS files which can be loaded when needed.This chunk are done by some of the tools which inbuild the create-react-app has done internally so we dont worry about it.
+
+                        build files has random numbers that makes browser that it is a new file which is termed as cache bursting.
+
+      3)run npx serve build to run production build
+
+                        
+THere are two kinds of server:
+
+1.)static server.For only serving files without need of server we use static servers.we provide only build folder they host it directly.
+
+CLI-gh-pages which allows command line utility.
+
+Eaxmple:github pages,Netlify
+
+2.)VPS(virtual Private Server) cloud.which means on their remote cloud they allocate a working computer and you run your project on the computer which will be accessed by public.Vps are used when you need to hosting app which has server logic.Like node.js
+
+example:VULTR,Heroku,DigitalOcean.
+
+
+Deploying in githubpages:
+
+1.)npm i -D gh-pages
+2.)In package.json,Add homepages(use the url after deploying which will be in the settings of the repo),repostory(with url of github repo) and deploy cli command in script
+
+
+
+
