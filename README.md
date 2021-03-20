@@ -135,3 +135,82 @@ Next.js:https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&u
 React + Express=Next.js
 
 SEO:https://searchengineland.com/guide/seo
+
+
+
+PM2:
+PM2 is a daemon process manager that will help you manage and keep your application online.
+
+https://pm2.keymetrics.io/
+
+1.)npm install pm2-g
+
+2.)pm2 start app.js
+
+3.)pm2 stop app
+
+4.)pm2 ls -to see the servers running
+
+5.)pm2 delete app.js -this will remove from the ppm2 list
+
+6.)pm2 start src/app.js --name blogApp -this will make us to start the server with name assigned
+
+Ecosystem & Clusters
+
+1.)pm2 ecosystem-creates ecosystem.config.js file
+
+this file describe what are all the app and where they are located 
+
+Note:
+Your admin who is managing pm2 will maintain environment variable
+
+You can pass the env vaiable from the ecoSystem env.variable
+  
+  apps : [{
+    name: "app",
+    script: "./app.js",
+    env: {
+      NODE_ENV: "development",
+    },
+    env_production: {
+      NODE_ENV: "production",
+    }
+  }]
+
+2.)Go to ecosystem.config.js generated and create an array named apps and add app name object with its value and js filepath that to be run on the server.
+
+3.)pm2 [start|restart|stop|delete] ecosystem.config.js
+
+Note:
+we can have many apps in one ecosystem file
+this ecosystem files are managed by server admin.
+
+
+this ecosystem are managed in server
+
+4.)Add watch property in ecosystem.config.js so that the server updates like nodemon but make sure it is added only on developement server.After adding watch flag you need to delete the enn.config.js file and then restart the file.
+
+Cluster:
+
+It checks the number of cores of your computer and runs the app on the available cores.that is since node.js is threaded we can run in multiple cores.
+
+1.)add  exec_mode:"cluster" flag and instances:"max" or any desired num in config file.
+
+2.)pm2 delete app
+
+3.)pm2 start app
+
+custom scripts:
+
+pm2 monit(to se the working of servers)
+
+we can serve the static files by creating custom servers.
+
+1.)add name of the script("static-server"),script("npx serve -s"),cwd(move to the director and typepwd to get the path of the directory) directory from which it should run
+
+2.)deletethe config file
+
+3.)pm2 start config file
+
+
+similar to pm2 we have forever-npm
