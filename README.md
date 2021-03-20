@@ -75,23 +75,22 @@ Anime in framer
 
 NOTE:
 
- "test": "react-scripts test",-It runs all Unit/Integration Tests in cli
+"test": "react-scripts test",-It runs all Unit/Integration Tests in cli
 
- TOOl:
- Jest developed FB
- Jest you need to add additional code to check  ether our code works or not
+TOOl:
+Jest developed FB
+Jest you need to add additional code to check ether our code works or not
 
-JS TESTING:    https://jestjs.io/en/
-React testing:	https://testing-library.com/docs/react-testing-library/intro
+JS TESTING: https://jestjs.io/en/
+React testing: https://testing-library.com/docs/react-testing-library/intro
 
- "eject": "react-scripts eject"-In react-create-app,all the node files comes with by default to add some additional functionality to the files eject will give the files from the node_modules so that we can make a change init.
+"eject": "react-scripts eject"-In react-create-app,all the node files comes with by default to add some additional functionality to the files eject will give the files from the node_modules so that we can make a change init.
 
- Note:
- Before ejecting make sure you do a commit to avoid havng multiple files.
+Note:
+Before ejecting make sure you do a commit to avoid havng multiple files.
 git reset --hard for reverting to previous commit
 
-
-  "build": "react-scripts build":
+"build": "react-scripts build":
 
         1.)git init->git add .->git commit->npm run built or yarn build this will create chunk of files under build directory
 
@@ -107,7 +106,6 @@ git reset --hard for reverting to previous commit
 
       3)run npx serve build to run production build
 
-                        
 THere are two kinds of server:
 
 1.)static server.For only serving files without need of server we use static servers.we provide only build folder they host it directly.
@@ -120,12 +118,20 @@ Eaxmple:github pages,Netlify
 
 example:VULTR,Heroku,DigitalOcean.
 
-
 Deploying in githubpages:
 
 1.)npm i -D gh-pages
 2.)In package.json,Add homepages(use the url after deploying which will be in the settings of the repo),repostory(with url of github repo) and deploy cli command in script
 
+//Learn more on:
+PWA - https://create-react-app.dev/docs/making-a-progressive-web-app
 
+Deployment - https://create-react-app.dev/docs/deployment
 
+Custom Templates - https://create-react-app.dev/docs/custom-templates
 
+Next.js:https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&utm_medium=homepage-cta&utm_campaign=next-website
+
+React + Express=Next.js
+
+SEO:https://searchengineland.com/guide/seo
